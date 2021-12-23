@@ -5,7 +5,7 @@ const db=require("./models");
 const start=async ()=>{
     let {sequelize}=db;
     await sequelize.authenticate();
-    await sequelize.sync();//create tables on db if they don't exist yet
+    // await sequelize.sync();//create tables on db if they don't exist yet, since we have migration we don't need this anymore
     console.log('Connection has been established successfully.');
     let {models}=sequelize;
     let users=await db.user.findAll();
