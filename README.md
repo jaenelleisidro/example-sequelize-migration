@@ -40,10 +40,18 @@ npx sequelize-cli db:seed:all
 to undo seeds
 npx sequelize-cli db:seed:undo
 
+undo specific seeds
+npx sequelize-cli db:seed:undo --seed name-of-seed-as-in-data
+
 to redo, just run this again
 npx sequelize-cli db:seed:all
 
 
 note that seeds are not tracked so running them twice will result to duplicate data
 
+
+
+to create a custom migration, we generate a skeleton
+run this 
+npx sequelize-cli migration:generate --name migration-skeleton
 
