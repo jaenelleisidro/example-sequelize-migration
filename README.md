@@ -36,3 +36,14 @@ for creating initial data for our table you can use seeds
 npx sequelize-cli seed:generate --name demo-user
 modify the generated js seeds according to your liking at seeds folder then run
 npx sequelize-cli db:seed:all
+
+to undo seeds
+npx sequelize-cli db:seed:undo
+
+to redo, just run this again
+npx sequelize-cli db:seed:all
+
+
+note that seeds are not tracked so running them twice will result to duplicate data
+
+
