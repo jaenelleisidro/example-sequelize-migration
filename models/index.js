@@ -37,7 +37,14 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// const start=async ()=>{
+//   //generate new tables based on models
+//   let {sequelize}=db;
+//   await sequelize.authenticate();
+//   await sequelize.sync();//create tables on db if they don't exist yet, since we have migration we don't need this anymore
+// }
 
+// start().catch((e)=>{console.error('Unable to connect to the database:', e);});
 
 
 module.exports = db;
